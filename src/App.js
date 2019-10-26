@@ -1,10 +1,11 @@
 import React from 'react';
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import './App.css';
 
 import NavBar from "./components/NavBar";
 import FormikSignUpForm from './components/SignUpForm';
+import FormikLoginForm from './components/LoginForm';
 
 // SL have every student
 //TL all their students
@@ -13,11 +14,10 @@ import FormikSignUpForm from './components/SignUpForm';
 function App() {
   return (
     <>
-    <NavBar />
-    <h1>Hello</h1>
-    <Route exact path='/signup' component={FormikSignUpForm} />
+      <NavBar />
+      <Route exact path='/signup' component={ FormikSignUpForm } />
+      <Route exact path='/' component={ FormikLoginForm } />
     </>
-   
   );
 }
 
