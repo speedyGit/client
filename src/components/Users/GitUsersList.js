@@ -1,31 +1,30 @@
 import React, { useEffect, useState } from "react";
-import axiosWithAuth from '../../utils/axiosWithAuth';
+import axios from 'axios';
 import GitUsersCard from './GitUsersCard';
 import Loading from "../Loading/Loading";
 
 export default function GitUsersList() {
-  const [user, setUser] = useState([]);
+  const [users, setUser] = useState([]);
 
   useEffect(() => {
-    axiosWithAuth()
-      .get('https://hello')
+    axios
+      .get(`https://api.github.com/users/${users}`)
       .then(res => {
         setUser(res.data.results);
-        console.log('users', user)
+        console.log('users', users)
       })
       .catch(err => console.log('Something went wrong', err))
   }, []);
 
   return (
     <section>
-      {user.length ? (
-        user.map(u => {
-          return <GitUsersCard key={user.id} user={u} />
+      {users.length ? (
+        users.map(u => {
+          return <GitUsersCard key={users.id} user={u} />
         })
       ) : (
         <Loading />
       )}
-      
     </section>
   )
 }
