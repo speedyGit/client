@@ -16,6 +16,7 @@ function LoginForm({ errors, touched }) {
           {touched.username && errors.username && <p>{errors.username}</p>}
           <Field
             name="username"
+            type="text"
             className="input"
             placeholder="User Name"
           />
@@ -24,6 +25,7 @@ function LoginForm({ errors, touched }) {
           {touched.password && errors.password && <p>{errors.password}</p>}
           <Field 
             name="password"
+            type="password"
             className="input"
             placeholder="********"
           />
