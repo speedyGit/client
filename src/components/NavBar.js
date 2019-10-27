@@ -8,10 +8,10 @@ const Nav = props => (
   <header className='toolbar'>
     <nav className='toolbar_navigation'>
      
-      <div className='toolbar_logo'><h1 >Dashboard</h1></div>
+      <div className='toolbar_logo'><h1 >speedyGit</h1></div>
       <div className='spacer'></div>
       <div className='toolbar-navigation-items'>
-        <Link to="/welcome">Home</Link>
+        <Link to="/students">Home</Link>
         <Link to="/">Login</Link>
         <Link to="/signup">Sign Up</Link>
         
