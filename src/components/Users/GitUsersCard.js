@@ -1,16 +1,35 @@
 import React from 'react';
-import { List } from 'semantic-ui-react';
+import {
+  List,
+  Image
+} from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
 
-const GitUsersCard = () => (
-  <List divided relaxed>
-    <List.Item>
-      <List.Icon name='github' size='large' verticalAlign='middle' />
-      <List.Content>
-        <List.Header as='a'>Semantic-Org/Semantic-UI</List.Header>
-        <List.Description as='a'>Updated 10 mins ago</List.Description>
-      </List.Content>
-    </List.Item>
-  </List>
-)
+import './GitUserCard.css';
+
+const GitUsersCard = props => {
+  console.log(props.user)
+  return ( <
+    List divided relaxed >
+    <
+    List.Item >
+
+    <
+    Image src = {
+      props.user.avatar_url
+    }
+    className = 'tiny' / >
+    <
+    List.Content >
+    <
+    List.Header as = 'a' > {
+      props.user.login
+    } < /List.Header> <
+    List.Description as = 'a' > Updated 10 mins ago < /List.Description> <
+    /List.Content> <
+    /List.Item> <
+    /List>
+  )
+}
 
 export default GitUsersCard;

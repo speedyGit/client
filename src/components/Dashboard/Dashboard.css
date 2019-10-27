@@ -1,0 +1,64 @@
+.user-dashboard {
+  background: rgb(207, 209, 209);
+  /* height: 100vh; */
+}
+
+.dashboard-form {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-form p {
+  margin-left: 30px;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 5%;
+}
+
+.input {
+  width: 90%;
+  height: 50px;
+  background: rgb(190, 190, 199);
+}
+
+.btnSignUp {
+  background-color: #20262e;
+  position: relative;
+  border: none;
+  font-size: 1.7rem;
+  color: #ffffff;
+  /* padding: 10px 15px; */
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btnSignUp:after {
+  content: "";
+  background: #767676;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.btnSignUp:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}

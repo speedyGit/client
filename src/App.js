@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import FormikSignUpForm from './components/SignUpForm';
 import FormikLoginForm from './components/LoginForm';
 import GitUsersList from './components/Users/GitUsersList';
+import Dashboard from './components/Dashboard/Dashboard';
 
 // SL have every student
 //TL all their students
@@ -18,7 +19,8 @@ function App() {
       <NavBar />
       <Route exact path='/signup' component={ FormikSignUpForm } />
       <Route exact path='/' component={ FormikLoginForm } />
-      <PrivateRoute path='/students' component={ GitUsersList } />
+      {/* <PrivateRoute path='/students' component={ GitUsersList } /> */}
+      <Route path='/dashboard' component= { Dashboard } />
     </>
   );
 }
