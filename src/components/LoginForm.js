@@ -53,7 +53,7 @@ const FormikLoginForm = withFormik({
       username: values.username,
       password: values.password
     }
- console.log(values.username, values.password)
+//  console.log(values.username, values.password)
     axiosWithAuth()
       .post('/login', submitValues)
       .then(res => {
@@ -66,7 +66,7 @@ const FormikLoginForm = withFormik({
         resetForm();
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("id", res.data.id);
-        props.history.push("/welcome");
+        props.history.push("/dashboard");
       })
       .catch(err => console.log(err.response));
   }
